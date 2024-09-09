@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 100vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+.searchBar {
+    padding: 2px;
+}
+
+.input {
+    color: #fff;
+    font-family: 'Calibri';
+    font-size: 15px;
+    width: 50%;
+    min-width: 40vh;
+    background: #039aa5;
+    text-align: center;
+    text-decoration: #fff;
+    border: 1px solid rgb(0, 21, 255);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 4px;
+    box-shadow: 0 0 1.2rem rgb(2, 160, 252);
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.input::placeholder {
+    color: #fff;
+}
+.input:hover {
+    box-shadow: 0 0 8px #faf9f9e3;
+    transition-delay: 0.1s;
+}
+
+.button {
+    height: 29px;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid rgb(0, 21, 255);
+    background: rgb(53, 201, 206);
+    color: #fff;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    box-shadow: 0 0 1.2rem rgb(2, 160, 252);
+    text-shadow: -2px -2px 1px rgb(2, 130, 249), 2px 2px 1px rgb(2, 130, 249), -2px 2px 1px rgb(2, 130, 249), 2px -2px 1px rgb(2, 130, 249);
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.button:hover {
+    text-shadow: 0 0 1rem rgb(0, 21, 255), 0 0 1rem rgb(0, 21, 255);
+    box-shadow: 0 0 8px #faf9f9e3;
+    transition-delay: 0.1s;
+}
