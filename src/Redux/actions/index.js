@@ -14,8 +14,8 @@ import { GET_POKEMONS,
 */}
 
 // ======= APIs URL =======
-const apiUrl = URL_API;
-const apiUrlData = URL_TYPES;
+const apiUrl = API_KEY_URL;
+const apiUrlData = API_KEY_URL_TYPES;
 
 export function getPokemons() {
     return async function (dispatch) {
