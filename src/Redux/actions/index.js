@@ -14,10 +14,8 @@ import { GET_POKEMONS,
 */}
 
 // ======= APIs URL =======
-const apiUrl = import.meta.env.VITE_API_URL;
-const apiUrlData = import.meta.env.VITE_API_URL_TYPES;
-console.log(apiUrl);
-console.log(apiUrlData);
+const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
+const apiUrlData = "https://pokeapi.co/api/v2/type";
 
 export function getPokemons() {
     return async function (dispatch) {
