@@ -18,10 +18,10 @@ function Footer() {
                     <p className={styles.text}>
                         Hola! Me llamo Roberto Rocha; Cuento con una Licenciatura en Administración y actualmente
                         soy estudiante en la Universidad Tecnológica Nacional, cursando la Tecnicatura Superior en Programación.
-                        Aparte he realizado un bootcamp de formación profesional como Full Stack Developer, que me permitio adquirir nuevas herramientas 
+                        Aparte he realizado un bootcamp de formación profesional como Full Stack Developer, que me permitio adquirir nuevas herramientas
                         en el desarrollo de Aplicaciones Web.
                         <br />
-                        Actualmente me encuentro en activa búsqueda laboral. Si usted esta buscando una persona, para su empresa con amplias 
+                        Actualmente me encuentro en activa búsqueda laboral. Si usted esta buscando una persona, para su empresa con amplias
                         ganas de crecer, construir, y fomentar un grupo eficiente de trabajo, esta viendo el perfil correcto.
                         Contacteme por privado y le comento mis conocimientos en una entrevista.
                     </p>
@@ -38,22 +38,20 @@ function Footer() {
                 </div>
                 <div className={styles.column3}>
                     <h2 className={styles.subtitle}>Redes sociales</h2>
-                    {icons.map((el) => (
-                        <div key={el.id} className={styles.flexbox}>
+                    <div className={styles.icons}>
+                        {icons.map((el) => (
+                            <div key={el.id} className={styles.flexbox}>
                                 <span>
-                                <ion-icon name={el.icon}></ion-icon>
+                                    <ion-icon name={el.icon}></ion-icon>
                                 </span>
                                 <p>{el.name}</p>
-                            {/* <div className={styles.flex}>
                             </div>
-                            <div className={styles.flex}>
-                            </div> */}
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
             <div className={styles.copyright}>
-                <p>@copyright, All Rights Reserverd Roberto Rocha {date}</p>
+                <p>@copyright, All Rights Reserverd Lic. Roberto Rocha {date}</p>
             </div>
         </footer>
     )
