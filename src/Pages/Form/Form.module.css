@@ -1,0 +1,130 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    background: url("../../Images/Form.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.671);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    margin-top: 25px;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Calibri';
+    color: #fff;
+    width: 600px;
+}
+
+.title {
+    margin-bottom: 2%;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.label {
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+}
+
+.input {
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.input::placeholder {
+    text-align: center;
+}
+
+.types {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    padding: 2px 2px;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.space {
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    color: #fff;
+    text-shadow: -2px -2px 1px rgb(2, 130, 249), 2px 2px 1px rgb(2, 130, 249), -2px 2px 1px rgb(2, 130, 249), 2px -2px 1px rgb(2, 130, 249);
+    background: rgb(53, 201, 206);
+    border: 1px solid rgb(0, 21, 255);
+    border-radius: 15px;
+    box-shadow: 0 0 1.2rem rgb(2, 160, 252);
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.space:hover {
+    text-shadow: 0 0 1rem rgb(0, 21, 255), 0 0 1rem rgb(0, 21, 255);
+    box-shadow: 0 0 8px #faf9f9e3;
+    transition-delay: 0.1s;
+}
+
+.x {
+    font-size: 10px;
+    border-radius: 10px;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #356feb8c;
+    color: black;
+    cursor: pointer;
+}
+
+.btn {
+    padding-top: 15px;
+}
+
+.button {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 17px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    color: #fff;
+    text-shadow: -2px -2px 1px rgb(2, 130, 249), 2px 2px 1px rgb(2, 130, 249), -2px 2px 1px rgb(2, 130, 249), 2px -2px 1px rgb(2, 130, 249);
+    background: rgb(53, 201, 206);
+    border: 1px solid rgb(0, 21, 255);
+    border-radius: 15px;
+    box-shadow: 0 0 1.2rem rgb(2, 160, 252);
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.button:hover {
+    text-shadow: 0 0 1rem rgb(0, 21, 255), 0 0 1rem rgb(0, 21, 255);
+    box-shadow: 0 0 8px #faf9f9e3;
+    transition-delay: 0.1s;
+}
+
+.danger {
+    color: red;
+    font-family: 'Calibri';
+}
