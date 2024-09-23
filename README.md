@@ -6,7 +6,7 @@ Este proyecto a sido desarrollado usando la plantilla de desarrollo para proyect
 
 ## Objetivos del proyecto
 
-El proposito de este proyecto es poner en práctica los conocimientos en desarrollo Frontend. Construyendo una Single Page Application afirmando los conceptos aprendidos en el desarrollo web, poniendo en práctica recursos básicos en estilos y diseños (UX - UI). Mejorar la arquitectura del sistema, aprender mejores prácticas y practicar el workflow de GIT.
+El proposito de este proyecto es poner en práctica los conocimientos en desarrollo Frontend. Construyendo una Single Page Application afirmando los conceptos aprendidos en el desarrollo web, poniendo en práctica recursos básicos en estilos y diseños (UX - UI), arquitectura de software, buenas prácticas de código y workflow de GIT.
 
 ### Caracteristicas y funcionalidades
 
@@ -62,7 +62,7 @@ Las tecnologías usadas para la creación y desarrollo de este proyecto son las 
 
 ```
 cd api-pokemon-app
-npm run install
+npm install
 npm run dev
 ```
 # Contacto

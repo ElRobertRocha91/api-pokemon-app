@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 78vh;
+    padding-top: 75vh;
     margin-left: 25px;
     /* position: absolute;
     align-content: center;
@@ -99,12 +99,17 @@
 @media (max-width: 480px) {
     .containerPage {
         background-attachment: fixed;
-        background-size: 200% auto;
+        background-size: 215% auto;
         background-position: center center;
     }
 
     .title {
         position: absolute;
+        font-size: 24px;
         top: 0%;
+    }
+
+    .text {
+        margin-left: 0%;
     }
 }
