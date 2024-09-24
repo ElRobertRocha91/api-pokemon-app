@@ -95,6 +95,15 @@
     cursor: pointer;
 }
 
+.h4 {
+    font-size: 17px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    color: #fff;
+    text-shadow: -2px -2px 1px rgb(2, 130, 249), 2px 2px 1px rgb(2, 130, 249), -2px 2px 1px rgb(2, 130, 249), 2px -2px 1px rgb(2, 130, 249);
+}
+
 .btn {
     padding-top: 15px;
 }
@@ -114,6 +123,7 @@
     border: 1px solid rgb(0, 21, 255);
     border-radius: 15px;
     box-shadow: 0 0 1.2rem rgb(2, 160, 252);
+    cursor: pointer;
     overflow: hidden;
     transition: 0.4s;
 }

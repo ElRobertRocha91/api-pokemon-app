@@ -40,7 +40,7 @@ function Form() {
         weight: 0,
         types: []
     });
-    
+
     const navigate = useNavigate();
     const [errors, setErrors] = useState({});
 
@@ -95,21 +95,34 @@ function Form() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        dispatch(createPokemon(input));
-        alert("Pokemon created with success");
-        setInput([{
-            id: "",
-            name: "",
-            image: "",
-            live: 0,
-            attack: 0,
-            defense: 0,
-            velocity: 0,
-            height: 0,
-            weight: 0,
-            types: []
-        }]);
-        navigate("/home");
+        if (input.name.length === 0
+            && input.image.length === 0
+            && input.live <= 0
+            && input.attack <= 0
+            && input.defense <= 0
+            && input.velocity <= 0
+            && input.height <= 0
+            && input.weight <= 0
+            && input.types.length === 0
+        ) {
+            alert("Error: The form must be complete");
+        } else {
+            dispatch(createPokemon(input));
+            alert("Pokemon created with success");
+            setInput([{
+                id: "",
+                name: "",
+                image: "",
+                live: 0,
+                attack: 0,
+                defense: 0,
+                velocity: 0,
+                height: 0,
+                weight: 0,
+                types: []
+            }]);
+            navigate("/home");
+        }
     }
 
     return (
@@ -124,7 +137,7 @@ function Form() {
                             <input
                                 type="text"
                                 value={input.name}
-                                name="name" 
+                                name="name"
                                 id="name"
                                 placeholder="Enter name..."
                                 autoComplete="on"
@@ -138,7 +151,7 @@ function Form() {
                             <input
                                 type="number"
                                 value={input.live}
-                                name="live" 
+                                name="live"
                                 id="live"
                                 autoComplete="on"
                                 onChange={handleInput}
@@ -151,20 +164,20 @@ function Form() {
                             <input
                                 type="number"
                                 value={input.attack}
-                                name="attack" 
+                                name="attack"
                                 id="attack"
                                 autoComplete="on"
                                 onChange={handleInput}
                                 className={styles.input}
                             />
                         </div>
-                            {errors.attack && <p className={styles.danger}>{errors.attack}</p>}
+                        {errors.attack && <p className={styles.danger}>{errors.attack}</p>}
                         <div className={styles.form}>
                             <label htmlFor="defense" className={styles.label}>Defense: </label>
                             <input
                                 type="number"
                                 value={input.defense}
-                                name="defense" 
+                                name="defense"
                                 id="defense"
                                 autoComplete="on"
                                 onChange={handleInput}
@@ -177,7 +190,7 @@ function Form() {
                             <input
                                 type="number"
                                 value={input.velocity}
-                                name="velocity" 
+                                name="velocity"
                                 id="velocity"
                                 autoComplete="on"
                                 onChange={handleInput}
@@ -190,7 +203,7 @@ function Form() {
                             <input
                                 type="number"
                                 value={input.height}
-                                name="height" 
+                                name="height"
                                 id="height"
                                 autoComplete="on"
                                 onChange={handleInput}
@@ -203,7 +216,7 @@ function Form() {
                             <input
                                 type="number"
                                 value={input.weight}
-                                name="weight" 
+                                name="weight"
                                 id="weight"
                                 autoComplete="on"
                                 onChange={handleInput}
@@ -253,9 +266,12 @@ function Form() {
                                 }
                             </div>
                         </div>
-                        <div className={styles.btn}>
-                            <button className={styles.button} type="submit">Create</button>
-                        </div>
+                        {errors.name || errors.live || errors.attack || errors.defense || errors.height || errors.weight || errors.image || errors.types ? 
+                        <h4 className={styles.h4}>Complete the form</h4> :
+                            <div className={styles.btn}>
+                                <button className={styles.button} type="submit">Create</button>
+                            </div>
+                        }
                     </form>
                 </div>
             </div>
