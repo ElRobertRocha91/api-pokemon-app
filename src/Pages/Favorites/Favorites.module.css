@@ -1,0 +1,45 @@
+.pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    height: 130px;
+    width: 300px;
+    padding: 15px;
+    margin: auto;
+    color: #fff;
+    background: #24303c;
+    font-family: 'Calibri';
+    border-radius: 5px;
+    border: solid 1px #fff;
+}
+
+.text {
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 30px;
+}
+
+.link {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 15px;
+    border: 1px solid rgb(0, 21, 255);
+    background: rgb(53, 201, 206);
+    box-shadow: 0 0 1.2rem rgb(2, 160, 252);
+    padding: 10px 15px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.link:hover {
+    text-shadow: 0 0 1rem rgb(0, 21, 255), 0 0 1rem rgb(0, 21, 255);
+    box-shadow: 0 0 8px #faf9f9e3;
+    transition-delay: 0.1s;
+}
