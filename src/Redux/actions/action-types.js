@@ -6,3 +6,6 @@ export const ORDER_BY_NAME = "ORDER_BY_NAME";
 export const ORDER_BY_ATTACK = "ORDER_BY_ATTACK";
 export const ORDER_BY_TYPES = "ORDER_BY_TYPES";
 export const CREATE_POKEMON = "CREATE_POKEMON";
+export const FILTER_BY_ORIGEN = "FILTER_BY_ORIGEN";
+export const ADD_FAVORITE = "ADD_FAVORITE";
+export const DELETE_FAVORITE = "DELETE_FAVORITE";
