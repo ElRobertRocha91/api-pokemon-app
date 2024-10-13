@@ -27,26 +27,30 @@ function Footer() {
                     </p>
                 </div>
                 <div className={styles.column2}>
-                    <h2 className={styles.subtitle}>Contactos</h2>
-                    <div className={styles.contact}>
-                        {icons.map((el) => (
-                            <div key={el.id} className={styles.link}>
-                                <p>{el.link}</p>
-                            </div>
-                        ))}
+                    <div className={styles.colunm2A}>
+                        <h2 className={styles.subtitle}>Contactos</h2>
+                        <div className={styles.contact}>
+                            {icons.map((el) => (
+                                <div key={el.id} className={styles.link}>
+                                    <p>{el.link}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div className={styles.column3}>
-                    <h2 className={styles.subtitle}>Redes sociales</h2>
-                    <div className={styles.icons}>
-                        {icons.map((el) => (
-                            <div key={el.id} className={styles.flexbox}>
-                                <span>
-                                    <ion-icon name={el.icon}></ion-icon>
-                                </span>
-                                <p>{el.name}</p>
-                            </div>
-                        ))}
+                    <div className={styles.column2B}>
+                        <h2 className={styles.subtitle}>Redes sociales</h2>
+                        <div className={styles.icons}>
+                            {icons.map((el) => (
+                                <div key={el.id} className={styles.flexbox}>
+                                    <a href={el.link} target="_black" rel="noopener noreferrer">
+                                        <span>
+                                            <ion-icon name={el.icon}></ion-icon>
+                                        </span>
+                                    </a>
+                                    <p>{el.name}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
