@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPokemons, getTypes, orderByName, orderByAttack, orderByTypes } from "../../Redux/actions/index.js";
+import { getPokemons, getTypes, orderByName, orderByAttack, orderByTypes, filterByOrigen } from "../../Redux/actions/index.js";
 import { Link } from "react-router-dom";
 import Navbar from "../../Layout/Navbar/Navbar";
 import Loading from "../../Components/Loading/Loading.jsx";
@@ -15,7 +15,7 @@ function Home() {
     const listPokemons = useSelector((state) => state.pokemons);
     const listTypes = useSelector((state) => state.types);
     const [order, setOrder] = useState(""); // ==>> Estado para trabajar los ordenamientos
-    
+
     useEffect(() => {
         dispatch(getPokemons());
         dispatch(getTypes());
@@ -64,7 +64,9 @@ function Home() {
     }
 
     // Filtro para buscar por origen API o Creados por el cliente
-    function handleFilterByOrigin() { }
+    function handleFilterByOrigin() {
+        dispatch(filterByOrigen(e.target.value));
+    }
 
     return (
         <>
@@ -74,7 +76,7 @@ function Home() {
                         <Navbar />
                         <div className={style.home}>
                             {/* Botones */}
-                            <div>
+                            <div className={style.btn}>
                                 <button
                                     className={style.button}
                                     onClick={e => { handleClick(e) }}>
@@ -87,41 +89,43 @@ function Home() {
                             </div>
                             {/* Selectores de filtros y ordenamientos */}
                             <div>
-                                <select
-                                    className={style.select}
-                                    onChange={e => handleSort(e)}
-                                >
-                                    <option value="Order-Letter">Order by letter</option>
-                                    <option value="A-Z">A-Z</option>
-                                    <option value="Z-A">Z-A</option>
-                                </select>
-                                <select
-                                    className={style.select}
-                                    onChange={e => handleAttack(e)}
-                                >
-                                    <option value="Order-Attack">Order by attack</option>
-                                    <option value="Men-May">Men-May</option>
-                                    <option value="May-Men">May-Men</option>
-                                </select>
-                                <select
-                                    className={style.select}
-                                    onChange={e => handleFilterByTypes(e)}
-                                >
-                                    <option key="All" value="All">Type of Pokemon</option>
-                                    {
-                                        listTypes && listTypes.map(type => (
-                                            <option key={type} value={type}>{type}</option>
-                                        ))
-                                    }
-                                </select>
-                                <select
-                                    className={style.select}
-                                    onChange={e => handleFilterByOrigin(e)}
-                                >
-                                    <option value="All">All</option>
-                                    <option value="Created">DB</option>
-                                    <option value="API">API</option>
-                                </select>
+                                <div className={style.selects}>
+                                    <select
+                                        className={style.select}
+                                        onChange={e => handleSort(e)}
+                                    >
+                                        <option value="Order-Letter">Order by letter</option>
+                                        <option value="A-Z">A-Z</option>
+                                        <option value="Z-A">Z-A</option>
+                                    </select>
+                                    <select
+                                        className={style.select}
+                                        onChange={e => handleAttack(e)}
+                                    >
+                                        <option value="Order-Attack">Order by attack</option>
+                                        <option value="Men-May">Men-May</option>
+                                        <option value="May-Men">May-Men</option>
+                                    </select>
+                                    <select
+                                        className={style.select}
+                                        onChange={e => handleFilterByTypes(e)}
+                                    >
+                                        <option key="All" value="All">Type of Pokemon</option>
+                                        {
+                                            listTypes && listTypes.map(type => (
+                                                <option key={type} value={type}>{type}</option>
+                                            ))
+                                        }
+                                    </select>
+                                    <select
+                                        className={style.select}
+                                        onChange={e => handleFilterByOrigin(e)}
+                                    >
+                                        <option value="All">All</option>
+                                        <option value="Created">DB</option>
+                                        <option value="API">API</option>
+                                    </select>
+                                </div>
                                 {/* Barra de búsqueda por nombre */}
                                 <div>
                                     <SearchBar />
