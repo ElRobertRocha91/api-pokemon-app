@@ -58,13 +58,13 @@ function Home() {
 
     // Filtro para filtrar por tipo de pokemon
     function handleFilterByTypes(e) {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         dispatch(orderByTypes(e.target.value));
         setOrder(`${e.target.value}`);
     }
 
     // Filtro para buscar por origen API o Creados por el cliente
-    function handleFilterByOrigin() {
+    function handleFilterByOrigin(e) {
         dispatch(filterByOrigen(e.target.value));
     }
 
@@ -122,7 +122,7 @@ function Home() {
                                         onChange={e => handleFilterByOrigin(e)}
                                     >
                                         <option value="All">All</option>
-                                        <option value="Created">DB</option>
+                                        <option value="Created">Created</option>
                                         <option value="API">API</option>
                                     </select>
                                 </div>
