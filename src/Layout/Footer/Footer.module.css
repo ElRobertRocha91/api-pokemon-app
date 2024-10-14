@@ -6,10 +6,31 @@
 }
 
 .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    gap: 1rem;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    gap: 2rem;
     padding: 20px;
+}
+
+.column2 {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+@media (max-width:750px) {
+    .content {
+        grid-template-columns: 338px;
+    }
+
+    .column2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(360, 1fr));
+    }
+
+    .flexbox {
+        margin-left: 100px;
+    }
 }
 
 .title {
@@ -33,7 +54,7 @@
 .flexbox {
     display: flex;
     align-items: center;
-    margin-left: 150px;
+    /* margin-left: 150px; */
 }
 
 ion-icon {
@@ -62,4 +83,9 @@ ion-icon:hover {
 
 .link {
     padding-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }

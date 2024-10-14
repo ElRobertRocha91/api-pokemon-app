@@ -1,11 +1,15 @@
 import axios from "axios";
-import { GET_POKEMONS, 
-    GET_POKEMON_BY_NAME, 
-    GET_DETAILS, GET_TYPES, 
-    ORDER_BY_NAME, 
-    ORDER_BY_ATTACK, 
-    ORDER_BY_TYPES, 
-    CREATE_POKEMON } from "./action-types";
+import {
+    GET_POKEMONS,
+    GET_POKEMON_BY_NAME,
+    GET_DETAILS, GET_TYPES,
+    ORDER_BY_NAME,
+    ORDER_BY_ATTACK,
+    ORDER_BY_TYPES,
+    CREATE_POKEMON,
+    FILTER_BY_ORIGEN,
+    ADD_FAVORITE,
+    DELETE_FAVORITE } from "./action-types";
 
 {/* ========================== getPokemons ===========================
     Función para obtener la info de los pokemones de la APIs cuando se ingrese al "/Home"
@@ -25,9 +29,9 @@ export function getPokemons() {
             const res2 = await axios.get(resNext);
             const infoApi = res.data.results.concat(res2.data.results);
             // Data => [{name: "", url: ""}, {}, {}];
-            
+
             const data = [];
-            for(let i = 0; i < infoApi.length; i++){
+            for (let i = 0; i < infoApi.length; i++) {
                 let obj = await axios(infoApi[i].url);
                 data.push({
                     id: obj.data.id,
@@ -143,6 +147,27 @@ export function orderByTypes(payload) {
 export function createPokemon(payload) {
     return {
         type: CREATE_POKEMON,
+        payload,
+    }
+}
+
+export function filterByOrigen(payload) {
+    return {
+        type: FILTER_BY_ORIGEN,
+        payload,
+    }
+}
+
+export function addFavorite(payload) {
+    return {
+        type: ADD_FAVORITE,
+        payload,
+    }
+}
+
+export function deleteFavorite(payload) {
+    return {
+        type: DELETE_FAVORITE,
         payload,
     }
 }
