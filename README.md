@@ -61,6 +61,7 @@ Las tecnologías usadas para la creación y desarrollo de este proyecto son las 
 ¡Te gusto mí proyecto! Te invito a que lo descargues y lo pruebes de manero local en tu PC
 
 ```
+git clone https://github.com/ElRobertRocha91/api-pokemon-app.git
 cd api-pokemon-app
 npm install
 npm run dev
