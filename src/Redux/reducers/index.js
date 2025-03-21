@@ -118,7 +118,7 @@ function rootReducer(state = initialState, action) {
     case CREATE_POKEMON:
         return {
             ...state,
-            newPokemon: action.payload,
+            newPokemon: [...state.newPokemon, action.payload],
         }
     default:
         return  {
