@@ -85,3 +85,57 @@
     padding-top: 10px;
     font-family: 'Calibri';
 }
+
+/* ====== ABOUT RESPONSIVE ====== */
+@media (max-width: 680px) {
+    .page {
+        height: auto;
+    }
+    .container {
+        margin-top: 50px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 5px;
+        max-width: 600px;
+    }
+    .title {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    .text {
+        font-size: 20px;
+    }
+    .card {
+        flex-wrap: wrap;
+    }
+    .image {
+        height: 70px;
+        width: 70px;
+    }
+}
+@media (max-width: 1150px) and (min-width: 680px) {
+    .page {
+        height: auto;
+    }
+    .container {
+        margin-top: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        max-width: 900px;
+    }
+    .title {
+        font-size: 35px;
+    }
+    .text {
+        font-size: 22px;
+    }
+    .card {
+        flex-wrap: wrap;
+    }
+    .image {
+        width: 85px;
+        height: 85px;
+    }  
+}
