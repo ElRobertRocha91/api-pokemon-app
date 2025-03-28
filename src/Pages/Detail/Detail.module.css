@@ -73,7 +73,7 @@ p {
 }
 
 span {
-  font-weight: 600;
+  font-weight: 600px;
   font-style: normal;
   padding-right: 30px;
   padding-left: 0px;
@@ -106,4 +106,57 @@ span {
   text-shadow: 0 0 1rem rgb(0, 21, 255), 0 0 1rem rgb(0, 21, 255);
   box-shadow: 0 0 8px #faf9f9e3;
   transition-delay: 0.1s;
+}
+
+@media (max-width:680px) {
+  .container {
+    height: auto;
+  }
+  .card {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    font-size: 15px;
+  }
+  .img {
+    height: 15rem;
+    width: 15rem;
+  }
+  .detail {
+    width: 20rem;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .list {
+    font-size: 20px;
+  }
+  .data {
+    padding: 5px;
+  }
+  .link {
+    font-size: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 1250px) and (min-width: 940px) {
+  .card {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .detail {
+    width: 30rem;
+  }
+}
+
+@media (max-width:940px) and (min-width: 680px) {
+  .detail {
+    width: 22rem;
+  }  
+  .img {
+    height: 20rem;
+    width: 20rem;
+  }
 }
