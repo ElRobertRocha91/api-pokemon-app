@@ -3,7 +3,7 @@ const icons = [
         id: 0,
         name: "LinkedIn",
         icon: "logo-linkedin",
-        link: "https://www.linkedin.com/in/roberto-esteban-rocha"
+        link: "https://www.linkedin.com/in/roberto91"
     },
     {
         id: 1,
@@ -21,7 +21,7 @@ const icons = [
         id: 3,
         name: "WhatsApp",
         icon: "logo-whatsapp",
-        link: "1136482123"
+        link: "https://wa.me/+5491136482123"
     }
 ];
 
