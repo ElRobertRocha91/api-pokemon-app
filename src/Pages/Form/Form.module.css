@@ -138,3 +138,27 @@
     color: red;
     font-family: 'Calibri';
 }
+
+@media (max-width: 680px) {
+    .page {
+        height: auto;
+    }
+    .container{
+        width: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .form {
+        flex-direction: column;
+        text-align: center;
+    }
+    .label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .input {
+        width: 100%;
+    }
+}
