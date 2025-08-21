@@ -16,9 +16,9 @@ function Footer() {
                 <div className={styles.column1}>
                     <h2 className={styles.subtitle}>Acerca de Mí</h2>
                     <p className={styles.text}>
-                        Hola! Me llamo Roberto Rocha; Cuento con una Licenciatura en Administración y actualmente
-                        soy estudiante en la Universidad Tecnológica Nacional, cursando la Tecnicatura Superior en Programación.
-                        Aparte he realizado un bootcamp de formación profesional como Full Stack Developer, que me permitio adquirir nuevas herramientas
+                        ¡Hola, me llamo Roberto Rocha! Soy un Desarrollador Web altamente motivado y con muchas ganas de crecer profesionalmente,
+                        actualmente curso la Tecnicatura Universitaria en Programación, en la prestigiosa Universidad Tecnológica Nacional UTN.
+                        Aparte he realizado el curso de Experto Universitario en Programación Web Full Stack en el Centro de e-Learning UTN FRBA, lo que me permitio adquirir nuevas herramientas
                         en el desarrollo de Aplicaciones Web.
                         <br />
                         Actualmente me encuentro en activa búsqueda laboral. Si usted esta buscando una persona, para su empresa con amplias
